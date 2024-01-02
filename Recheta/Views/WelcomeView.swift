@@ -9,9 +9,24 @@ import SwiftUI
 
 struct WelcomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("Recheta")
+                    .font(.title)
+                
+                HStack {
+                    NavigationLink("Individual", destination: TeamGameSetupView())
+                        .buttonStyle(.borderedProminent)
+                    
+                    NavigationLink("Equipos", destination: TeamGameSetupView())
+                        .buttonStyle(.borderedProminent)
+                }
+            }
+        }
     }
 }
+
+
 
 #Preview {
     WelcomeView()

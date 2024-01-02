@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134AC2A82B44C48F00D074D6 /* RandomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134AC2A72B44C48F00D074D6 /* RandomizerView.swift */; };
 		139A87E42B434CBD004789D1 /* RechetaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A87E32B434CBD004789D1 /* RechetaApp.swift */; };
-		139A87E62B434CBD004789D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A87E52B434CBD004789D1 /* ContentView.swift */; };
 		139A87E82B434CC0004789D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139A87E72B434CC0004789D1 /* Assets.xcassets */; };
 		139A87EB2B434CC0004789D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139A87EA2B434CC0004789D1 /* Preview Assets.xcassets */; };
 		139A87F52B434CC0004789D1 /* RechetaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A87F42B434CC0004789D1 /* RechetaTests.swift */; };
 		139A87FF2B434CC0004789D1 /* RechetaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A87FE2B434CC0004789D1 /* RechetaUITests.swift */; };
 		139A88012B434CC0004789D1 /* RechetaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A88002B434CC0004789D1 /* RechetaUITestsLaunchTests.swift */; };
+		139A88122B434F75004789D1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A88112B434F75004789D1 /* MainView.swift */; };
+		139A88142B434FE5004789D1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A88132B434FE5004789D1 /* WelcomeView.swift */; };
+		139A88162B435292004789D1 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A88152B435292004789D1 /* TeamModel.swift */; };
+		139A88182B436043004789D1 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A88172B436043004789D1 /* TeamsView.swift */; };
+		139A881C2B436107004789D1 /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A881B2B436107004789D1 /* WordsView.swift */; };
+		139A881E2B436154004789D1 /* TeamGameSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A881D2B436154004789D1 /* TeamGameSetupView.swift */; };
+		139A88202B43750B004789D1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A881F2B43750B004789D1 /* SettingsView.swift */; };
+		139A88222B4377AE004789D1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A88212B4377AE004789D1 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		134AC2A72B44C48F00D074D6 /* RandomizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerView.swift; sourceTree = "<group>"; };
 		139A87E02B434CBD004789D1 /* Recheta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recheta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139A87E32B434CBD004789D1 /* RechetaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechetaApp.swift; sourceTree = "<group>"; };
-		139A87E52B434CBD004789D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		139A87E72B434CC0004789D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		139A87EA2B434CC0004789D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		139A87F02B434CC0004789D1 /* RechetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RechetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,14 @@
 		139A87FA2B434CC0004789D1 /* RechetaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RechetaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		139A87FE2B434CC0004789D1 /* RechetaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechetaUITests.swift; sourceTree = "<group>"; };
 		139A88002B434CC0004789D1 /* RechetaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechetaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		139A88112B434F75004789D1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		139A88132B434FE5004789D1 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		139A88152B435292004789D1 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		139A88172B436043004789D1 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
+		139A881B2B436107004789D1 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
+		139A881D2B436154004789D1 /* TeamGameSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamGameSetupView.swift; sourceTree = "<group>"; };
+		139A881F2B43750B004789D1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		139A88212B4377AE004789D1 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				139A87E32B434CBD004789D1 /* RechetaApp.swift */,
-				139A87E52B434CBD004789D1 /* ContentView.swift */,
+				139A880D2B434D4E004789D1 /* Models */,
+				139A880F2B434D7C004789D1 /* Views */,
+				139A88102B434DA8004789D1 /* ViewModels */,
 				139A87E72B434CC0004789D1 /* Assets.xcassets */,
 				139A87E92B434CC0004789D1 /* Preview Content */,
 			);
@@ -125,6 +143,44 @@
 				139A88002B434CC0004789D1 /* RechetaUITestsLaunchTests.swift */,
 			);
 			path = RechetaUITests;
+			sourceTree = "<group>";
+		};
+		139A880D2B434D4E004789D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				139A88152B435292004789D1 /* TeamModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		139A880F2B434D7C004789D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				139A88112B434F75004789D1 /* MainView.swift */,
+				139A88132B434FE5004789D1 /* WelcomeView.swift */,
+				139A88212B4377AE004789D1 /* GameView.swift */,
+				139A881A2B4360C5004789D1 /* TeamGameSetupGroup */,
+				134AC2A72B44C48F00D074D6 /* RandomizerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		139A88102B434DA8004789D1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		139A881A2B4360C5004789D1 /* TeamGameSetupGroup */ = {
+			isa = PBXGroup;
+			children = (
+				139A881D2B436154004789D1 /* TeamGameSetupView.swift */,
+				139A88172B436043004789D1 /* TeamsView.swift */,
+				139A881B2B436107004789D1 /* WordsView.swift */,
+				139A881F2B43750B004789D1 /* SettingsView.swift */,
+			);
+			path = TeamGameSetupGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				139A87E62B434CBD004789D1 /* ContentView.swift in Sources */,
+				139A88122B434F75004789D1 /* MainView.swift in Sources */,
+				139A88202B43750B004789D1 /* SettingsView.swift in Sources */,
+				139A88142B434FE5004789D1 /* WelcomeView.swift in Sources */,
+				139A881E2B436154004789D1 /* TeamGameSetupView.swift in Sources */,
+				139A88222B4377AE004789D1 /* GameView.swift in Sources */,
+				139A881C2B436107004789D1 /* WordsView.swift in Sources */,
+				139A88182B436043004789D1 /* TeamsView.swift in Sources */,
+				139A88162B435292004789D1 /* TeamModel.swift in Sources */,
 				139A87E42B434CBD004789D1 /* RechetaApp.swift in Sources */,
+				134AC2A82B44C48F00D074D6 /* RandomizerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,13 +486,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Recheta/Preview Content\"";
+				DEVELOPMENT_TEAM = 4R4PJK8UFG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Recheta;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,6 +503,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = personal.Recheta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,13 +520,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Recheta/Preview Content\"";
+				DEVELOPMENT_TEAM = 4R4PJK8UFG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Recheta;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +537,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = personal.Recheta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

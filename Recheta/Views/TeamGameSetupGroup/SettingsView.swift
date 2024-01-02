@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @Binding var rounds: Int
+    
+    @Binding var seconds: Int
+    @Binding var lives: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Section("Longitud"){
+                Stepper("Rondas \(rounds)", value: $rounds)
+//                Stepp
+            }
+            
+            Section("Ronda") {
+                Stepper("Segundos \(seconds)", value: $seconds)
+                Stepper("Vidas \(lives)", value: $lives)
+            }
+
+        }
     }
 }
 
 #Preview {
-    SettingsView()
+    NavigationStack {
+        VStack {
+            TabView {
+                SettingsView(rounds: .constant(5), seconds: .constant(10), lives: .constant(3)).tabItem { Label("Configuraciones", systemImage: "gear") }
+            }
+            Spacer()
+            Button("Empezar"){}
+        }
+    }
 }

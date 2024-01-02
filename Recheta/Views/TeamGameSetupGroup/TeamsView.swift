@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct TeamsView: View {
-    @State var teams: [Team] = [Team(name: "Big A"), Team(name: "Lud")]
+    @Binding var teams: [Team]
     @State var addTeam: Bool = false
     @State var teamName: String = ""
     
     var body: some View {
         
-//        NavigationStack {
-            VStack {
-                List {
+            List {
+                Section("Equipos", content: {
                     ForEach(teams, id: \.self.name){
                         team in
                         HStack {
@@ -26,23 +25,16 @@ struct TeamsView: View {
                     .onDelete(perform: { indexSet in
                         teams.remove(atOffsets: indexSet)
                     })
-                }
-                Spacer()
-                Button("Empezar", action: {})
-                    .buttonStyle(.borderedProminent)
-                    .frame(maxWidth: .infinity)
-                    
-                
-            }
-            .navigationTitle("Equipos")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing, content: {
                     Button(action: {
                         addTeam = true
                     }, label: {
-                        Image(systemName: "plus")
+                        VStack(alignment: .center) {
+                            Image(systemName: "plus")
+                        }
+                        .frame(maxWidth: .infinity)
                     })
                 })
+                
             }
             .alert("Nombre del Equipo", isPresented: $addTeam, actions: {
                 TextField("Nombre del Equipo", text: $teamName)
@@ -71,6 +63,12 @@ struct TeamsView: View {
 
 #Preview {
     NavigationStack {
-        TeamView()
+        VStack {
+            TabView {
+                TeamsView(teams: .constant([Team(name: "Big A"), Team(name: "Lud")])).tabItem { Label("Equipos", systemImage: "person.3") }
+            }
+            Spacer()
+            Button("Empezar"){}
+        }
     }
 }

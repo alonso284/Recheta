@@ -8,11 +8,52 @@
 import SwiftUI
 
 struct RandomizerView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    let categoriesIncluded:[WordCategories]
+    
+    @State var timeRemaining: Int
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    @State private var shownWord: String? = nil
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(shownWord ?? "Error")
+                .font(.largeTitle)
+            Text("\(timeRemaining)")
+                .onReceive(timer) { time in
+                    if timeRemaining > 0 {
+                        timeRemaining -= 1
+                    } else {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+            }
+                .font(.title2)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .ignoresSafeArea(.all)
+        .background(Color.accentColor)
+        .onTapGesture {
+            chooseWord()
+        }
+        .navigationBarBackButtonHidden(true)
+        .onAppear(perform: {
+            chooseWord()
+        })
+    }
+    
+    func chooseWord() {
+        guard let category = categoriesIncluded.randomElement() else {
+            return
+        }
+        
+        if let list = words[category] {
+            shownWord = list.randomElement()
+        }
     }
 }
 
 #Preview {
-    RandomizerView()
+    RandomizerView(categoriesIncluded: [WordCategories.Fruit, WordCategories.Celebrities, WordCategories.Places], timeRemaining: 15)
 }
