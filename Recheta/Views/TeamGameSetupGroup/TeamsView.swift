@@ -9,12 +9,10 @@ import SwiftUI
 
 struct TeamsView: View {
     @Binding var teams: [Team]
-    @State var addTeam: Bool = false
-    @State var teamName: String = ""
+    @State private var addTeam: Bool = false
+    @State private var teamName: String = ""
     
     var body: some View {
-        
-            List {
                 Section("Equipos", content: {
                     ForEach(teams, id: \.self.name){
                         team in
@@ -34,18 +32,18 @@ struct TeamsView: View {
                         .frame(maxWidth: .infinity)
                     })
                 })
-                
-            }
             .alert("Nombre del Equipo", isPresented: $addTeam, actions: {
                 TextField("Nombre del Equipo", text: $teamName)
                 
                 Button(action: {
+                    teamName = ""
                 }, label: {
                     Text("Cancel")
                 })
                 Button(action: {
                     if validateTeamName() {
                         teams.append(Team(name: teamName))
+                        teamName = ""
                     }
                 }, label: {
                     Text("Add")
@@ -53,7 +51,6 @@ struct TeamsView: View {
                 })
 
             })
-//        }
     }
     
     func validateTeamName() -> Bool {
@@ -64,11 +61,9 @@ struct TeamsView: View {
 #Preview {
     NavigationStack {
         VStack {
-            TabView {
+            List {
                 TeamsView(teams: .constant([Team(name: "Big A"), Team(name: "Lud")])).tabItem { Label("Equipos", systemImage: "person.3") }
             }
-            Spacer()
-            Button("Empezar"){}
         }
     }
 }

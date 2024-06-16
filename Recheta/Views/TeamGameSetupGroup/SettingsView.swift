@@ -7,37 +7,30 @@
 
 import SwiftUI
 
+// TODO
+// Do not allow limit to go under
+
 struct SettingsView: View {
     
     @Binding var rounds: Int
-    
     @Binding var seconds: Int
     @Binding var lives: Int
     
     var body: some View {
-        List {
-            Section("Longitud"){
+            Section("Partida"){
                 Stepper("Rondas \(rounds)", value: $rounds)
-//                Stepp
-            }
-            
-            Section("Ronda") {
-                Stepper("Segundos \(seconds)", value: $seconds)
+                Stepper("Duración (seg) \(seconds)", value: $seconds)
                 Stepper("Vidas \(lives)", value: $lives)
             }
-
-        }
     }
 }
 
 #Preview {
     NavigationStack {
         VStack {
-            TabView {
+            List {
                 SettingsView(rounds: .constant(5), seconds: .constant(10), lives: .constant(3)).tabItem { Label("Configuraciones", systemImage: "gear") }
             }
-            Spacer()
-            Button("Empezar"){}
         }
     }
 }

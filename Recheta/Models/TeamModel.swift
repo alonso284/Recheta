@@ -7,10 +7,10 @@
 
 import Foundation
 
-enum WordCategories {
+enum WordCategories: Comparable {
+    case Celebrities
     case Fruit
     case Places
-    case Celebrities
 }
 
 let words = [

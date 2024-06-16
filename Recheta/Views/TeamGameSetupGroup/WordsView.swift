@@ -9,39 +9,42 @@ import SwiftUI
 
 struct WordsView: View {
     
-    @Binding var categoriesIncluded: [WordCategories]
-//    @State var categoriesIncluded: [WordCategories] = []
+    @Binding var categoriesIncluded: Set<WordCategories>
     
     var body: some View {
-        List {
-            Section("Seleccionados"){
-                ForEach(categoriesIncluded, id: \.self){
-                    key in
-                    Text("\(categoryNames[key]!)")
-                }
-                .onDelete(perform: { indexSet in
-                    categoriesIncluded.remove(atOffsets: indexSet)
-                })
-            }
+//        List {
             Section("Categorias") {
-                Button("Agregar Todos"){
-                    for key in Array(categoryNames.keys) {
-                        if !categoriesIncluded.contains([key]){
-                            categoriesIncluded.append(key)
+                Button((categoriesIncluded.count != categoryNames.count ? "Agragar todos" : "Eliminar todos")){
+                    
+                    if categoriesIncluded.count == categoryNames.count {
+                        categoriesIncluded = []
+                    } else {
+                        for key in Array(categoryNames.keys) {
+                            categoriesIncluded.insert(key)
                         }
                     }
                 }
-                ForEach(Array(categoryNames.keys), id: \.self){
+                .bold()
+                ForEach(Array(categoryNames.keys).sorted(), id: \.self){
                     key in
-                    Button("\(categoryNames[key]!)"){
-                        if !categoriesIncluded.contains([key]){
-                            categoriesIncluded.append(key)
+                    HStack {
+                        Text("\(categoryNames[key]!)")
+                            
+                        Spacer()
+                        Image(systemName: (categoriesIncluded.contains(key) ?  "checkmark.circle.fill": "circle"))
+                    }
+                    .onTapGesture {
+                        if categoriesIncluded.contains(key) {
+                            categoriesIncluded.remove(key)
+                        } else {
+                            categoriesIncluded.insert(key)
                         }
                     }
+                    
                 }
             }
         }
-    }
+//    }
 }
 
 
@@ -49,13 +52,11 @@ struct WordsView: View {
 #Preview {
     NavigationStack {
         VStack {
-            TabView {
+            List {
                 WordsView(categoriesIncluded: .constant([]))
 //                WordsView()
                     .tabItem { Label("Palabras", systemImage: "list.bullet.circle") }
             }
-            Spacer()
-            Button("Empezar"){}
         }
     }
 }
